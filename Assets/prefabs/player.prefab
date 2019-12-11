@@ -209,15 +209,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1946745684574373389}
     m_Modifications:
-    - target: {fileID: 8409062631021540856, guid: 769d3c97f8dedbc42872fe26fb77befe,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8050415496756371297, guid: 769d3c97f8dedbc42872fe26fb77befe,
         type: 3}
       propertyPath: m_Name
       value: club
+      objectReference: {fileID: 0}
+    - target: {fileID: 8050415496756371229, guid: 769d3c97f8dedbc42872fe26fb77befe,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8050415496756371230, guid: 769d3c97f8dedbc42872fe26fb77befe,
         type: 3}
@@ -274,15 +274,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 41.907
       objectReference: {fileID: 0}
-    - target: {fileID: 8050415496756371229, guid: 769d3c97f8dedbc42872fe26fb77befe,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 8050415496756371298, guid: 769d3c97f8dedbc42872fe26fb77befe,
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8409062631021540856, guid: 769d3c97f8dedbc42872fe26fb77befe,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 769d3c97f8dedbc42872fe26fb77befe, type: 3}
