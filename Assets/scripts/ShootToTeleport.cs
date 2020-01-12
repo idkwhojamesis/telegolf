@@ -15,10 +15,13 @@ public class ShootToTeleport : MonoBehaviour
 
     public Color Color1 = Color.green;
     public Color Color2 = Color.blue;
-    public float LerpRate = 100f;
+    public float LerpRate = 100f, ppRate = 10f;
     Renderer rend;
     Renderer pRend;
     Animator pAnim;
+
+    private int downTime = 0;
+    private bool held = false, released = false;
 
     // Start is called before the first frame update
     void Start()
@@ -32,7 +35,19 @@ public class ShootToTeleport : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Input.GetMouseButtonDown(0))
+        // Input detection moved to Update()
+        if (held)
+        {
+            downTime++;
+            if (downTime > 30)
+            {
+                float pp = Mathf.PingPong(Time.time * ppRate, 1);
+                bulletSp = Mathf.Lerp(1, 40, pp);
+                pRend.material.color = Color.Lerp(Color1, Color2, pp);
+            }
+            held = false;
+        }
+        if (released)
         {
             // Destroy previous bullets
             if (GameObject.FindGameObjectsWithTag("bullets").Length > 0)
@@ -48,12 +63,16 @@ public class ShootToTeleport : MonoBehaviour
             Shoot();
             clip = nb.GetComponentInChildren<ClipCheck>();
             rend = nb.GetComponent<Renderer>();
+            downTime = 0;
         }
+        released = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetMouseButton(0)) held = true;
+        else if (Input.GetMouseButtonUp(0)) released = true;
         // Teleport on rightclick
         if (nb && Input.GetMouseButtonDown(1) && clipRange == false)
         {
@@ -63,7 +82,7 @@ public class ShootToTeleport : MonoBehaviour
             //GetComponent<Rigidbody>().MovePosition(nbTF);
             transform.position = nbTF;
         }
-        if (nb)
+        if (nb && Input.GetMouseButton(0) == false)
         {
             clipRange = clip.ClipRange;
             // Get distance and lerp color over certain distance

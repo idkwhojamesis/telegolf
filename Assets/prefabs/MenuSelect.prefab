@@ -537,7 +537,7 @@ Camera:
   field of view: 60
   orthographic: 0
   orthographic size: 5
-  m_Depth: -1
+  m_Depth: 2
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -914,7 +914,9 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'James Park
 
-    10 December 2019'
+    12 January 2020
+
+    2nd Prototype'
 --- !u!1 &7930750600169577990
 GameObject:
   m_ObjectHideFlags: 0
