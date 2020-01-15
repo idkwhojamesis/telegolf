@@ -373,7 +373,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Telegolf
 
-    Test Demo 1.1'
+    Test Demo 1'
 --- !u!1 &5958493115073165442
 GameObject:
   m_ObjectHideFlags: 0
@@ -914,7 +914,9 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'James Park
 
-    12 January 2020'
+    12 January 2020
+
+    2nd Prototype'
 --- !u!1 &7930750600169577990
 GameObject:
   m_ObjectHideFlags: 0
