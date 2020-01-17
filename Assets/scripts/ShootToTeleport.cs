@@ -53,7 +53,7 @@ public class ShootToTeleport : MonoBehaviour
             if (GameObject.FindGameObjectsWithTag("bullets").Length > 0)
             {
                 GameObject[] bullets = GameObject.FindGameObjectsWithTag("bullets");
-                for (int i = 1; i < bullets.Length; i++)
+                for (int i = 0; i < bullets.Length; i++)
                 {
                     Destroy(bullets[i]);
                 }
@@ -62,7 +62,7 @@ public class ShootToTeleport : MonoBehaviour
             pAnim.Play("swing", 0, 0f);
             Shoot();
             clip = nb.GetComponentInChildren<ClipCheck>();
-            rend = nb.GetComponent<Renderer>();
+            rend = nb.GetComponentInChildren<Renderer>();
             downTime = 0;
         }
         released = false;
@@ -106,6 +106,6 @@ public class ShootToTeleport : MonoBehaviour
     private void Shoot()
     {
         nb = (GameObject)Instantiate(bullet, transform.position + bulletFwd * transform.forward + bulletUp * transform.up, transform.rotation);
-        nb.GetComponent<Rigidbody>().velocity = cam.transform.forward * bulletSp;
+        nb.GetComponentInChildren<Rigidbody>().velocity = cam.transform.forward * bulletSp;
     }
 }

@@ -19,7 +19,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1946745684540199945
 Transform:
   m_ObjectHideFlags: 0
@@ -63,7 +63,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab1a210b22b1acd47848cc1d95c00a8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1286967657042750465, guid: 0df4f122f51457142a8f194563ecf6ed, type: 3}
+  bullet: {fileID: 1286967657042750465, guid: aeb7be742e710644ba061202d77ba4cd, type: 3}
   club: {fileID: 4545251370135264132}
   prism: {fileID: 8403461620597228371}
   bulletUp: 0
@@ -299,6 +299,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: club
       objectReference: {fileID: 0}
+    - target: {fileID: 8409062631021540856, guid: 769d3c97f8dedbc42872fe26fb77befe,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8050415496756371298, guid: 769d3c97f8dedbc42872fe26fb77befe,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8050415496756371229, guid: 769d3c97f8dedbc42872fe26fb77befe,
         type: 3}
       propertyPath: m_Mesh
@@ -358,16 +368,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 41.907
-      objectReference: {fileID: 0}
-    - target: {fileID: 8050415496756371298, guid: 769d3c97f8dedbc42872fe26fb77befe,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8409062631021540856, guid: 769d3c97f8dedbc42872fe26fb77befe,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 769d3c97f8dedbc42872fe26fb77befe, type: 3}
